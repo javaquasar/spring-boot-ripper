@@ -1,0 +1,3 @@
+org.springframework.context.ApplicationContextInitializer=conference.spring.boot.ripper.profiles.ProfileCheckApplicationContextInitializer
+
+org.springframework.boot.diagnostics.FailureAnalyzer=conference.spring.boot.ripper.profiles.ProfileNeededFailureAnalyzer
