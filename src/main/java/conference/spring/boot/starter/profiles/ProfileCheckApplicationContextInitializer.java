@@ -1,4 +1,4 @@
-package conference.spring.boot.ripper.profiles;
+package conference.spring.boot.starter.profiles;
 
 import com.sun.tools.javac.util.List;
 import org.springframework.context.ApplicationContextInitializer;
