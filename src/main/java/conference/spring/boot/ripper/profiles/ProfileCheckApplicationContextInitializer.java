@@ -12,8 +12,7 @@ public class ProfileCheckApplicationContextInitializer implements ApplicationCon
   @Override
   public void initialize(ConfigurableApplicationContext applicationContext) {
     if (!List.from(applicationContext.getEnvironment().getActiveProfiles()).contains("production")) {
-      throw new RuntimeException("" +
-          "");
+      throw new RuntimeException("Shoud have production profile");
     }
   }
 }
