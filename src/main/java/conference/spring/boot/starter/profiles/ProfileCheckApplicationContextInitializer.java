@@ -1,6 +1,5 @@
 package conference.spring.boot.starter.profiles;
 
-import com.sun.tools.javac.util.List;
 import org.springframework.context.ApplicationContextInitializer;
 import org.springframework.context.ConfigurableApplicationContext;
 
@@ -11,7 +10,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 public class ProfileCheckApplicationContextInitializer implements ApplicationContextInitializer {
   @Override
   public void initialize(ConfigurableApplicationContext applicationContext) {
-    if (!List.from(applicationContext.getEnvironment().getActiveProfiles()).contains("production")) {
+    if (applicationContext.getEnvironment().getActiveProfiles().length == 0) {
       throw new RuntimeException("Shoud have production profile");
     }
   }

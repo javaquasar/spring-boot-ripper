@@ -13,7 +13,7 @@ public class ProfilesEnvironmentPostProcessor implements EnvironmentPostProcesso
   public void postProcessEnvironment(ConfigurableEnvironment environment, SpringApplication application) {
     String os = System.getProperty("os.name");
 
-    if (os.equalsIgnoreCase("Mac Os X")) {
+    if (os.equalsIgnoreCase("Windows")) {
       environment.addActiveProfile("dev");
     }
 
