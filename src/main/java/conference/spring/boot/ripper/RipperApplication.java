@@ -20,7 +20,8 @@ public class RipperApplication {
   }
 
   public static void main(String[] args) {
-    SpringApplication.run(RipperApplication.class, args);
+    SpringApplication.run(new Object[]{RipperConfiguration.class, RipperApplication.class}, args);
+
   }
 
 }

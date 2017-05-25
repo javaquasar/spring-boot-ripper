@@ -1,17 +1,7 @@
-buildscript {
-  ext {
-    springBootVersion = '1.5.3.RELEASE'
-  }
-  repositories {
-    mavenCentral()
-  }
-  dependencies {
-    classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-  }
-}
 
-apply plugin:'war'
-apply plugin:'org.springframework.boot'
+plugins {
+  id "org.springframework.boot" version "1.5.3.RELEASE"
+}
 
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
@@ -30,7 +20,7 @@ repositories {
 dependencies {
 //  compile 'org.springframework.cloud:spring-cloud-starter-config'
 //  compile 'org.springframework.cloud:spring-cloud-starter-eureka'
-  compile('org.springframework.boot:spring-boot-starter-web')
+  compile 'org.springframework.boot:spring-boot-starter-web'
   compile 'org.springframework.boot:spring-boot-actuator'
   compile 'org.springframework.boot:spring-boot-starter'
 	compile 'org.springframework.boot:spring-boot-loader'
@@ -40,8 +30,10 @@ dependencies {
 //  compile 'commons-logging:commons-logging:1.1.1'
 //  providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
   compileOnly 'org.projectlombok:lombok'
+  compileOnly 'org.springframework.boot:spring-boot-configuration-processor'
   testCompile 'org.springframework.boot:spring-boot-starter-test'
 }
+compileJava.dependsOn(processResources)
 
 springBoot {
   executable = true

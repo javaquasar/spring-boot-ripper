@@ -1,7 +1,0 @@
-org.springframework.context.ApplicationContextInitializer=conference.spring.boot.starter.profiles.ProfileCheckApplicationContextInitializer
-
-org.springframework.boot.diagnostics.FailureAnalyzer=conference.spring.boot.starter.profiles.ProfileNeededFailureAnalyzer
-
-org.springframework.context.ApplicationListener=conference.spring.boot.starter.profiles.EmailSendApplicationListener
-
-org.springframework.boot.env.EnvironmentPostProcessor=conference.spring.boot.starter.profiles.ProfilesEnvironmentPostProcessor
