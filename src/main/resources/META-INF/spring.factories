@@ -1,5 +1,6 @@
-org.springframework.boot.env.EnvironmentPostProcessor=conference.spring.boot.starter.profiles.ProfilesEnvironmentPostProcessor
-org.springframework.context.ApplicationContextInitializer=conference.spring.boot.starter.profiles.ProfileCheckApplicationContextInitializer
+org.springframework.boot.env.EnvironmentPostProcessor=conference.spring.boot.starter.profiles.CheckEnvAndSetAccordingToOsNameEnvironmentPostProcessor
+org.springframework.context.ApplicationContextInitializer=conference.spring.boot.starter.profiles.BadProfileInitializer
+
 org.springframework.boot.diagnostics.FailureAnalyzer=conference.spring.boot.starter.profiles.prepared.ProfileNeededFailureAnalyzer
 
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=conference.spring.boot.starter.profiles.NotificationAutoConfiguration
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=conference.spring.boot.starter.profiles.NotificationAutoConfig

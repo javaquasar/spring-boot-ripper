@@ -5,9 +5,15 @@ import org.springframework.context.ConfigurableApplicationContext;
 
 /**
  * @author tolkv
- * @version 25/05/2017
+ * @version 26/05/2017
  */
-public class ProfileCheckApplicationContextInitializer implements ApplicationContextInitializer {
+public class BadProfileInitializer implements ApplicationContextInitializer<ConfigurableApplicationContext> {
+  /**
+   * does not work
+   */
+  //  @Autowired
+  //  ApplicationContext applicationContext;
+
   @Override
   public void initialize(ConfigurableApplicationContext applicationContext) {
     if (applicationContext.getEnvironment().getActiveProfiles().length == 0) {

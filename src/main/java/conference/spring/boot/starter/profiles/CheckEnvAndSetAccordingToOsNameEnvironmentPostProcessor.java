@@ -6,11 +6,13 @@ import org.springframework.core.env.ConfigurableEnvironment;
 
 /**
  * @author tolkv
- * @version 25/05/2017
+ * @version 26/05/2017
  */
-public class ProfilesEnvironmentPostProcessor implements EnvironmentPostProcessor {
+public class CheckEnvAndSetAccordingToOsNameEnvironmentPostProcessor implements EnvironmentPostProcessor {
   @Override
-  public void postProcessEnvironment(ConfigurableEnvironment environment, SpringApplication application) {
+  public void postProcessEnvironment(ConfigurableEnvironment environment,
+                                     SpringApplication application) {
+
     String os = System.getProperty("os.name");
 
     if (os.equalsIgnoreCase("Windows")) {

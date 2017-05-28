@@ -10,4 +10,4 @@ prod:
     - aatarasoff@ok.ru
     - tolkv@alfalab.ru
     - jeka@naya.ru
-  can-notify: false
+  can-notify: true
